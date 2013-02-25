@@ -1,0 +1,2633 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 02/21/13 by eng2
+' *****************************************************************************
+Dim swApp As Object
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+Dim FeatureData As Object
+Dim Feature As Object
+Dim Component As Object
+Sub main()
+
+Set swApp = Application.SldWorks
+
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\WASHER (MC95630A415).SLDPRT", 1, 0, "", longstatus, longwarnings)
+Set Part = swApp.ActivateDoc ("WASHER (MC95630A415).SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameState = 1
+' MSGBOX
+' Are you trying to make a derived part?
+
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\WASHER (MC95630A415).SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\WASHER (MC95630A415).SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\WASHER (MC95630A415).SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\WASHER (MC95630A415).SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm Seat Clamp.SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm Seat Clamp.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Arm Seat Clamp.SLDPRT")
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm.SLDASM", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm.SLDASM", 2, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Arm.SLDASM")
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm Seat.SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm Seat.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Arm Seat.SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm.SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Arm.SLDPRT")
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Bushing.SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Bushing.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Bushing.SLDPRT")
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Handle.SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Handle.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Clamp Handle.SLDPRT")
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Housing.SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Housing.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Clamp Housing.SLDPRT")
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Latch.SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Latch.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Clamp Latch.SLDPRT")
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Panel.SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Panel.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Clamp Panel.SLDPRT")
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Shaft.SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Shaft.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Clamp Shaft.SLDPRT")
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Wheel.SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Wheel.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Clamp Wheel.SLDPRT")
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Index-Bridge.SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Index-Bridge.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Index-Bridge.SLDPRT")
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Latch Shaft.SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Latch Shaft.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Latch Shaft.SLDPRT")
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\PTFE WASHER (MC95630A425).SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\PTFE WASHER (MC95630A425).SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("PTFE WASHER (MC95630A425).SLDPRT")
+Part.ActiveView().RotateAboutCenter 0.0116492, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0155323, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0232985, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0310646, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0116492, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0310646, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.0194154, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0465969, -0.123791
+Part.ActiveView().RotateAboutCenter 0.0543631, -0.145637
+Part.ActiveView().RotateAboutCenter 0.0349477, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0854277, -0.203891
+Part.ActiveView().RotateAboutCenter 0.0815446, -0.233019
+Part.ActiveView().RotateAboutCenter 0.0737784, -0.218455
+Part.ActiveView().RotateAboutCenter 0.0388308, -0.101946
+Part.ActiveView().RotateAboutCenter 0.0543631, -0.138355
+Part.ActiveView().RotateAboutCenter 0.0427138, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0310646, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0310646, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0310646, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0155323, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0232985, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0232985, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0194154, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.00388308, 0
+Part.ActiveView().RotateAboutCenter 0.00388308, 0
+Part.ActiveView().RotateAboutCenter 0.00388308, 0
+Part.ActiveView().RotateAboutCenter 0.00776615, 0
+Part.ActiveView().RotateAboutCenter 0.00388308, 0
+Part.ActiveView().RotateAboutCenter 0.00776615, 0
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("WASHER (MC95630A415).SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Arm Seat Clamp.SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Arm.SLDASM")
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = Nothing
+swApp.CloseDoc "Arm.SLDASM"
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Arm Seat Clamp.SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ArrangeWindows 0
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 0
+swApp.ActiveDoc.ActiveView.FrameLeft = 44
+swApp.ActiveDoc.ActiveView.FrameTop = 58
+swApp.ActiveDoc.ActiveView.FrameWidth = 1696
+swApp.ActiveDoc.ActiveView.FrameHeight = 632
+swApp.ActiveDoc.ActiveView.FrameLeft = 44
+swApp.ActiveDoc.ActiveView.FrameTop = 64
+swApp.ActiveDoc.ActiveView.FrameLeft = 44
+swApp.ActiveDoc.ActiveView.FrameTop = 68
+swApp.ActiveDoc.ActiveView.FrameLeft = 44
+swApp.ActiveDoc.ActiveView.FrameTop = 77
+swApp.ActiveDoc.ActiveView.FrameLeft = 44
+swApp.ActiveDoc.ActiveView.FrameTop = 84
+swApp.ActiveDoc.ActiveView.FrameLeft = 44
+swApp.ActiveDoc.ActiveView.FrameTop = 101
+swApp.ActiveDoc.ActiveView.FrameLeft = 47
+swApp.ActiveDoc.ActiveView.FrameTop = 124
+swApp.ActiveDoc.ActiveView.FrameLeft = 54
+swApp.ActiveDoc.ActiveView.FrameTop = 161
+swApp.ActiveDoc.ActiveView.FrameLeft = 60
+swApp.ActiveDoc.ActiveView.FrameTop = 210
+swApp.ActiveDoc.ActiveView.FrameLeft = 71
+swApp.ActiveDoc.ActiveView.FrameTop = 293
+swApp.ActiveDoc.ActiveView.FrameLeft = 79
+swApp.ActiveDoc.ActiveView.FrameTop = 334
+swApp.ActiveDoc.ActiveView.FrameLeft = 83
+swApp.ActiveDoc.ActiveView.FrameTop = 352
+swApp.ActiveDoc.ActiveView.FrameLeft = 85
+swApp.ActiveDoc.ActiveView.FrameTop = 364
+swApp.ActiveDoc.ActiveView.FrameLeft = 85
+swApp.ActiveDoc.ActiveView.FrameTop = 369
+swApp.ActiveDoc.ActiveView.FrameLeft = 83
+swApp.ActiveDoc.ActiveView.FrameTop = 367
+swApp.ActiveDoc.ActiveView.FrameLeft = 80
+swApp.ActiveDoc.ActiveView.FrameTop = 361
+swApp.ActiveDoc.ActiveView.FrameLeft = 74
+swApp.ActiveDoc.ActiveView.FrameTop = 347
+Set Part = swApp.ActivateDoc ("WASHER (MC95630A415).SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameLeft = 15
+swApp.ActiveDoc.ActiveView.FrameTop = 46
+swApp.ActiveDoc.ActiveView.FrameLeft = 6
+swApp.ActiveDoc.ActiveView.FrameTop = 101
+swApp.ActiveDoc.ActiveView.FrameLeft = 6
+swApp.ActiveDoc.ActiveView.FrameTop = 173
+swApp.ActiveDoc.ActiveView.FrameLeft = 6
+swApp.ActiveDoc.ActiveView.FrameTop = 223
+swApp.ActiveDoc.ActiveView.FrameLeft = 6
+swApp.ActiveDoc.ActiveView.FrameTop = 256
+swApp.ActiveDoc.ActiveView.FrameLeft = 4
+swApp.ActiveDoc.ActiveView.FrameTop = 286
+swApp.ActiveDoc.ActiveView.FrameLeft = -3
+swApp.ActiveDoc.ActiveView.FrameTop = 319
+swApp.ActiveDoc.ActiveView.FrameLeft = -4
+swApp.ActiveDoc.ActiveView.FrameTop = 327
+swApp.ActiveDoc.ActiveView.FrameLeft = -7
+swApp.ActiveDoc.ActiveView.FrameTop = 331
+swApp.ActiveDoc.ActiveView.FrameLeft = -8
+swApp.ActiveDoc.ActiveView.FrameTop = 332
+Set Part = swApp.ActivateDoc ("PTFE WASHER (MC95630A425).SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameLeft = -5
+swApp.ActiveDoc.ActiveView.FrameTop = 23
+swApp.ActiveDoc.ActiveView.FrameLeft = -14
+swApp.ActiveDoc.ActiveView.FrameTop = 65
+swApp.ActiveDoc.ActiveView.FrameLeft = -26
+swApp.ActiveDoc.ActiveView.FrameTop = 143
+swApp.ActiveDoc.ActiveView.FrameLeft = -25
+swApp.ActiveDoc.ActiveView.FrameTop = 274
+swApp.ActiveDoc.ActiveView.FrameLeft = -25
+swApp.ActiveDoc.ActiveView.FrameTop = 442
+swApp.ActiveDoc.ActiveView.FrameLeft = -27
+swApp.ActiveDoc.ActiveView.FrameTop = 503
+Set Part = swApp.ActivateDoc ("Arm Seat.SLDPRT")
+swApp.LoadFile2 "C:\Program Files\SolidWorks\data\templates\AuroraAssembly.asmdot", ""
+Set Part = swApp.ActiveDoc
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.NewDocument ("C:\Program Files\SolidWorks\data\templates\AuroraAssembly.asmdot", 0, 0.000000, 0.000000)
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm Seat.SLDPRT", -0.000227156434363, 0.002112039034444, -0.003418810165044
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm.SLDPRT", -0.01993243949406, 0.002427785066459, -0.005796678792137
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Bushing.SLDPRT", -0.01938372896744, 0.01149254843392, 0.001966090471115
+Part.SetPickMode
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm Contact Shaft.SLDPRT", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm Contact Shaft.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Arm Contact Shaft.SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Assem1")
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm Contact Shaft.SLDPRT", -0.02771530998431, 0.0176164444938, 0.005660297830616
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0358335, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.031852, -0.0946639
+Part.ActiveView().RotateAboutCenter 0.031852, -0.101946
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.087382
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0946639
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.109228
+Part.ActiveView().RotateAboutCenter 0, -0.123791
+Part.ActiveView().RotateAboutCenter 0, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.101946
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.138355
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.131073
+Part.ActiveView().RotateAboutCenter -0.015926, -0.087382
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.023889, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.023889, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.031852, -0.116509
+Part.ActiveView().RotateAboutCenter -0.039815, -0.087382
+Part.ActiveView().RotateAboutCenter -0.063704, -0.152919
+Part.ActiveView().RotateAboutCenter -0.055741, -0.131073
+Part.ActiveView().RotateAboutCenter -0.047778, -0.0728184
+Part.ActiveView().RotateAboutCenter -0.071667, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.0597225, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0517595, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.063704, 0
+Part.ActiveView().RotateAboutCenter -0.0676855, 0
+Part.ActiveView().RotateAboutCenter -0.047778, 0
+Part.ActiveView().RotateAboutCenter -0.0437965, 0
+Part.ActiveView().RotateAboutCenter -0.0915745, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.095556, 0.043691
+Part.ActiveView().RotateAboutCenter -0.087593, 0.0728184
+Part.ActiveView().RotateAboutCenter -0.0995375, 0.0728184
+Part.ActiveView().RotateAboutCenter -0.055741, 0.0655365
+Part.ActiveView().RotateAboutCenter -0.0278705, 0.0364092
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter 0, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.101946
+Part.ActiveView().RotateAboutCenter -0.047778, -0.182046
+Part.ActiveView().RotateAboutCenter -0.0756485, -0.218455
+Part.ActiveView().RotateAboutCenter -0.095556, -0.167482
+Part.ActiveView().RotateAboutCenter -0.055741, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.063704, -0.043691
+Part.ActiveView().RotateAboutCenter -0.055741, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0597225, 0
+Part.ActiveView().RotateAboutCenter -0.0915745, 0
+Part.ActiveView().RotateAboutCenter -0.087593, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.0915745, 0.0509729
+Part.ActiveView().RotateAboutCenter -0.0437965, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.0597225, 0.0728184
+Part.ActiveView().RotateAboutCenter -0.0437965, 0.087382
+Part.ActiveView().RotateAboutCenter -0.039815, 0.116509
+Part.ActiveView().RotateAboutCenter -0.0517595, 0.218455
+Part.ActiveView().RotateAboutCenter -0.015926, 0.123791
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0946639
+Part.ActiveView().RotateAboutCenter -0.007963, 0.087382
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.109228
+Part.ActiveView().RotateAboutCenter 0, 0.1602
+Part.ActiveView().RotateAboutCenter 0, 0.269428
+Part.ActiveView().RotateAboutCenter 0, 0.174764
+Part.ActiveView().RotateAboutCenter 0, 0.116509
+Part.ActiveView().RotateAboutCenter 0, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0728184
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.087382
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.131073
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.131073
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.0946639
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.0655365
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.015926, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.007963, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, 0
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+Part.ActiveView().RotateAboutCenter 0.023889, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.023889, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0655365
+Part.ActiveView().RotateAboutCenter 0, -0.116509
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0728184
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter 0, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.023889, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.047778, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.047778, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.039815, 0
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+Part.ActiveView().RotateAboutCenter 0.023889, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.043691
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.087382
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.055741, -0.138355
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.116509
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.031852, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0119445, 0
+Part.ActiveView().RotateAboutCenter 0.023889, 0
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.043691
+Part.ActiveView().RotateAboutCenter 0.015926, 0.0509729
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.109228
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.138355
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.254864
+Part.ActiveView().RotateAboutCenter 0.023889, 0.182046
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.218455
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0728184
+Part.ActiveView().RotateAboutCenter 0, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, 0
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.031852, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0278705, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.015926, 0
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0039815, 0
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.043691
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.131073
+Part.ActiveView().RotateAboutCenter 0, 0.109228
+Part.ActiveView().RotateAboutCenter 0, 0.1602
+Part.ActiveView().RotateAboutCenter 0, 0.145637
+Part.ActiveView().RotateAboutCenter 0, 0.262146
+Part.ActiveView().RotateAboutCenter -0.007963, 0.19661
+Part.ActiveView().RotateAboutCenter 0, 0.313119
+Part.ActiveView().RotateAboutCenter -0.015926, 0.19661
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.262146
+Part.ActiveView().RotateAboutCenter -0.015926, 0.087382
+Part.ActiveView().RotateAboutCenter -0.0278705, 0.0655365
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.063704, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.039815, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.0597225, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.031852, 0.043691
+Part.ActiveView().RotateAboutCenter -0.031852, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.0437965, 0.043691
+Part.ActiveView().RotateAboutCenter -0.047778, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.031852, 0.043691
+Part.ActiveView().RotateAboutCenter -0.039815, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.055741, 0.087382
+Part.ActiveView().RotateAboutCenter -0.047778, 0.087382
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.0801002
+Part.ActiveView().RotateAboutCenter -0.039815, 0.087382
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.031852, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.031852, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.071667, 0.087382
+Part.ActiveView().RotateAboutCenter -0.0517595, 0.0801002
+Part.ActiveView().RotateAboutCenter -0.0836115, 0.131073
+Part.ActiveView().RotateAboutCenter -0.0437965, 0.0946639
+Part.ActiveView().RotateAboutCenter -0.039815, 0.087382
+Part.ActiveView().RotateAboutCenter -0.039815, 0.109228
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.087382
+Part.ActiveView().RotateAboutCenter 0, 0.043691
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0582547
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.0728184
+Part.ActiveView().RotateAboutCenter 0.039815, 0.0655365
+Part.ActiveView().RotateAboutCenter 0.0915745, 0.109228
+Part.ActiveView().RotateAboutCenter 0.119445, 0.101946
+Part.ActiveView().RotateAboutCenter 0.07963, 0.0509729
+Part.ActiveView().RotateAboutCenter 0.0836115, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.087593, 0
+Part.ActiveView().RotateAboutCenter 0.055741, 0
+Part.ActiveView().RotateAboutCenter 0.031852, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.047778, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.0676855, -0.109228
+Part.ActiveView().RotateAboutCenter 0.055741, -0.123791
+Part.ActiveView().RotateAboutCenter 0.0836115, -0.189328
+Part.ActiveView().RotateAboutCenter 0.039815, -0.138355
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.167482
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.101946
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.031852, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.087382
+Part.ActiveView().RotateAboutCenter 0.031852, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.087382
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.0358335, -0.131073
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.031852, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.023889, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0597225, 0
+Part.ActiveView().RotateAboutCenter 0.0517595, 0
+Part.ActiveView().RotateAboutCenter 0.095556, 0
+Part.ActiveView().RotateAboutCenter 0.0915745, 0
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.031852, 0
+Part.ActiveView().RotateAboutCenter 0.047778, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.015926, 0
+Part.ActiveView().RotateAboutCenter 0.039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0995375, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.07963, 0
+Part.ActiveView().RotateAboutCenter 0.155278, 0
+Part.ActiveView().RotateAboutCenter 0.095556, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.0676855, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.031852, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0676855, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, 0
+Part.ActiveView().RotateAboutCenter 0.007963, 0
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.01537567580971, 0.0008408312466486, -0.01453781800692, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.008340927124664, 0.00159298956379, 0.0001319061402754, True, 1, Nothing)
+Set Feature = Part.AddMate2 (1, 0, False, 0.01451542385639, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Right Plane", "PLANE", 0, 0, 0, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("Right@Arm-1@Assem1", "PLANE", 0, 0, 0, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 0, False, 0.01993243949406, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.02461801204754, 0.01917397009061, 0.005353263198884, False, 0, Nothing)
+Part.ActiveView().TranslateBy -0.000714901, 0.0004766
+Part.ActiveView().TranslateBy -0.0021447, 0.0021447
+Part.ActiveView().TranslateBy -0.0004766, 0.00548091
+Part.ActiveView().TranslateBy 0, 0.0131065
+Part.ActiveView().TranslateBy -0.0028596, 0.0150129
+Part.ActiveView().TranslateBy -0.0052426, 0.0145363
+Part.ActiveView().TranslateBy -0.0033362, 0.0128682
+Part.ActiveView().TranslateBy -0.0026213, 0.0123916
+Part.ActiveView().TranslateBy -0.002383, 0.0107235
+Part.ActiveView().TranslateBy -0.002383, 0.00953201
+Part.ActiveView().TranslateBy -0.0045277, 0.00929371
+Part.ActiveView().TranslateBy -0.00571921, 0.00929371
+Part.ActiveView().TranslateBy -0.00667241, 0.00786391
+Part.ActiveView().TranslateBy -0.0030979, 0.0035745
+Part.ActiveView().TranslateBy -0.0002383, 0.0004766
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.005317902209242, 0.001590078571496, 0.01748944509783, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.02681872087129, 0.01923103257809, 0.005837241970021, True, 1, Nothing)
+Set Feature = Part.AddMate2 (1, 0, False, 0.01870573567315, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Right@Arm Contact Shaft-1@Assem1", "PLANE", 0, 0, 0, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("Right Plane", "PLANE", 0, 0, 0, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 0, False, 0.02781557451284, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.0160918811917, 0.009918375297559, 0.002171359044262, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.0009705844700534, 0.0047487482733, 0.01760750089221, True, 1, Nothing)
+Set Feature = Part.AddMate2 (1, 0, False, 0.01753158031888, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Right@Arm Contact Shaft-1@Assem1", "PLANE", 0, 0, 0, True, 1, Nothing)
+Part.DeSelectByID "Right@Arm Contact Shaft-1@Assem1", "PLANE", 0, 0, 0
+boolstatus = Part.Extension.SelectByID("Right@Bushing-1@Assem1", "PLANE", 0, 0, 0, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("Right Plane", "PLANE", 0, 0, 0, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 0, False, 0.01938372896744, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.SetPickMode
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.047778, -0.116509
+Part.ActiveView().RotateAboutCenter -0.0995375, -0.254864
+Part.ActiveView().RotateAboutCenter -0.0597225, -0.145637
+Part.ActiveView().RotateAboutCenter -0.047778, -0.123791
+Part.ActiveView().RotateAboutCenter -0.0437965, -0.109228
+Part.ActiveView().RotateAboutCenter -0.039815, -0.101946
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter 0, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.007963, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.047778, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.031852, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.031852, 0
+Part.ActiveView().RotateAboutCenter 0.023889, 0
+Part.ActiveView().RotateAboutCenter 0.0278705, 0
+Part.ActiveView().RotateAboutCenter 0.0199075, 0
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.00728184
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.007429500000057, 0.002584092406238, 0.01739763299095, False, 0, Nothing)
+Part.TranslateComponent
+Part.ActiveView().RotateAboutCenter 0.015926, -0.087382
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.240301
+Part.ActiveView().RotateAboutCenter 0.031852, -0.283992
+Part.ActiveView().RotateAboutCenter 0.039815, -0.283992
+Part.ActiveView().RotateAboutCenter 0.055741, -0.27671
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.101946
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.043691
+Part.ActiveView().RotateAboutCenter 0.031852, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.023889, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.023889, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+' MSGBOX
+' Assem1 has not been rebuilt successfully since the last feature change or an externally referenced model has changed.
+' 	It is safest to rebuild before saving.
+' 		Rebuild now?
+
+Part.SaveAs2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm.SLDASM", 0, FALSE, FALSE
+Part.ClearSelection2 True
+Set Part = Nothing
+swApp.CloseDoc "Arm.SLDASM"
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Arm Seat.SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = Nothing
+swApp.CloseDoc "Arm Seat.SLDPRT"
+swApp.ActiveDoc.ActiveView.FrameLeft = -27
+swApp.ActiveDoc.ActiveView.FrameTop = 503
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("PTFE WASHER (MC95630A425).SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameLeft = -27
+swApp.ActiveDoc.ActiveView.FrameTop = 503
+swApp.ActiveDoc.ActiveView.FrameLeft = -27
+swApp.ActiveDoc.ActiveView.FrameTop = 503
+swApp.ActiveDoc.ActiveView.FrameState = 2
+swApp.ActiveDoc.ActiveView.FrameLeft = -27
+swApp.ActiveDoc.ActiveView.FrameTop = 503
+Set Part = swApp.ActivateDoc ("WASHER (MC95630A415).SLDPRT")
+Set Part = Nothing
+swApp.CloseDoc "WASHER (MC95630A415).SLDPRT"
+Set Part = swApp.ActivateDoc ("Arm Seat Clamp.SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameWidth = 1770
+swApp.ActiveDoc.ActiveView.FrameHeight = 922
+swApp.LoadFile2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm.SLDASM", ""
+Set Part = swApp.ActiveDoc
+Set Part = swApp.OpenDoc6 ("C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm.SLDASM", 2, 0, "", longstatus, longwarnings)
+Set Part = swApp.ActivateDoc ("Arm.SLDASM")
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.031852, 0.087382
+Part.ActiveView().RotateAboutCenter -0.039815, 0.138355
+Part.ActiveView().RotateAboutCenter -0.0597225, 0.174764
+Part.ActiveView().RotateAboutCenter -0.0597225, 0.203891
+Part.ActiveView().RotateAboutCenter -0.0676855, 0.211173
+Part.ActiveView().RotateAboutCenter -0.087593, 0.283992
+Part.ActiveView().RotateAboutCenter -0.0597225, 0.1602
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.101946
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0728184
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.0728184
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0509729
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.0582547
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.152919
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.203891
+Part.ActiveView().RotateAboutCenter 0.063704, 0.269428
+Part.ActiveView().RotateAboutCenter 0.071667, 0.291273
+Part.ActiveView().RotateAboutCenter 0.1075, 0.400501
+Part.ActiveView().RotateAboutCenter 0.0597225, 0.189328
+Part.ActiveView().RotateAboutCenter 0.055741, 0.131073
+Part.ActiveView().RotateAboutCenter 0.039815, 0.0582547
+Part.ActiveView().RotateAboutCenter 0.047778, 0.043691
+Part.ActiveView().RotateAboutCenter 0.055741, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.0517595, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.071667, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.031852, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.0358335, -0.0728184
+Part.ActiveView().RotateAboutCenter 0.0358335, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.031852, -0.043691
+Part.ActiveView().RotateAboutCenter 0.023889, -0.043691
+Part.ActiveView().RotateAboutCenter 0.031852, -0.0728184
+Part.ActiveView().RotateAboutCenter 0.023889, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0728184
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0728184
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0119445, 0
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.039815, 0
+Part.ActiveView().RotateAboutCenter 0.031852, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.031852, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0437965, 0
+Part.ActiveView().RotateAboutCenter 0.031852, 0
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm Seat Clamp.SLDPRT", -0.02018773450692, 0.007478867165219, -0.01542868833053
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.047778, 0.0655365
+Part.ActiveView().RotateAboutCenter -0.031852, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.055741, 0.0801002
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.043691
+Part.ActiveView().RotateAboutCenter -0.0278705, 0.043691
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0119445, 0
+Part.ActiveView().RotateAboutCenter 0.0756485, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.071667, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.103519, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0517595, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.063704, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.039815, 0
+Part.ActiveView().RotateAboutCenter 0.039815, 0
+Part.ActiveView().RotateAboutCenter 0.015926, 0
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.023889, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.0676855, -0.19661
+Part.ActiveView().RotateAboutCenter -0.0517595, -0.152919
+Part.ActiveView().RotateAboutCenter -0.0517595, -0.087382
+Part.ActiveView().RotateAboutCenter -0.039815, -0.0728184
+Part.ActiveView().RotateAboutCenter -0.0278705, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0728184
+Part.ActiveView().RotateAboutCenter -0.015926, -0.145637
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.015926, -0.087382
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.123791
+Part.ActiveView().RotateAboutCenter -0.023889, -0.087382
+Part.ActiveView().RotateAboutCenter -0.039815, -0.109228
+Part.ActiveView().RotateAboutCenter -0.0278705, -0.043691
+Part.ActiveView().RotateAboutCenter -0.023889, -0.0145637
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.02997199736853, 0.01531124405855, -0.01415868833055, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.023889, 0.109228
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.174764
+Part.ActiveView().RotateAboutCenter 0.063704, 0.225737
+Part.ActiveView().RotateAboutCenter 0.07963, 0.247582
+Part.ActiveView().RotateAboutCenter 0.0995375, 0.349528
+Part.ActiveView().RotateAboutCenter 0.111482, 0.364092
+Part.ActiveView().RotateAboutCenter 0.0597225, 0.182046
+Part.ActiveView().RotateAboutCenter 0.031852, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0218455
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.002074654872956, 0.009961055719415, -0.01229926508341, True, 1, Nothing)
+Set Feature = Part.AddMate2 (5, 1, True, 0.000635, 0.000635, 0.000635, 1, 1, 0.03490658503988, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter -0.087593, -0.131073
+Part.ActiveView().RotateAboutCenter -0.0915745, -0.123791
+Part.ActiveView().RotateAboutCenter -0.023889, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0437965, -0.0728184
+Part.ActiveView().RotateAboutCenter -0.07963, -0.27671
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0728184
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0218455
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.00746384951384, 0.007085805459852, -0.01439930639722, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.071667, 0.0801002
+Part.ActiveView().RotateAboutCenter -0.0756485, 0.0801002
+Part.ActiveView().RotateAboutCenter -0.0597225, 0.0655365
+Part.ActiveView().RotateAboutCenter -0.031852, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.043691
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.007963, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0145637
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.0001425347830377, 0.0127, -0.009120175027476, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 0, False, 0.000635, 0, 0, 1, 1, 1.570796326795, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.001104304110015, 0.00938411536697, -0.01412520892234, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.008753158556374, 0.008706632403971, -0.008348384177737, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 0, False, 0.007845803246948, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter 0.015926, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0676855, -0.043691
+Part.ActiveView().RotateAboutCenter 0.047778, -0.043691
+Part.ActiveView().RotateAboutCenter 0.071667, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.087593, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0676855, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.055741, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.015926, 0
+Part.Save2 FALSE
+Set Part = Nothing
+swApp.CloseDoc "Arm.SLDASM"
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Arm Seat Clamp.SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = Nothing
+swApp.CloseDoc "Arm Seat Clamp.SLDPRT"
+swApp.ActiveDoc.ActiveView.FrameLeft = 220
+swApp.ActiveDoc.ActiveView.FrameTop = 290
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Latch Shaft.SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameLeft = 220
+swApp.ActiveDoc.ActiveView.FrameTop = 290
+swApp.ActiveDoc.ActiveView.FrameLeft = 220
+swApp.ActiveDoc.ActiveView.FrameTop = 290
+swApp.ActiveDoc.ActiveView.FrameState = 2
+swApp.ActiveDoc.ActiveView.FrameLeft = 220
+swApp.ActiveDoc.ActiveView.FrameTop = 290
+Set Part = swApp.ActivateDoc ("Index-Bridge.SLDPRT")
+Set Part = swApp.ActivateDoc ("Clamp Housing.SLDPRT")
+swApp.LoadFile2 "C:\Program Files\SolidWorks\data\templates\AuroraAssembly.asmdot", ""
+Set Part = swApp.ActiveDoc
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.NewDocument ("C:\Program Files\SolidWorks\data\templates\AuroraAssembly.asmdot", 0, 0.000000, 0.000000)
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Housing.SLDPRT", -0.0003949813019908, 0.003445343800308, -0.005584204660579
+Part.ActiveView().RotateAboutCenter 0.0597225, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.0946639
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.0946639
+Part.ActiveView().RotateAboutCenter 0.0358335, -0.152919
+Part.ActiveView().RotateAboutCenter 0.031852, -0.283992
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.283992
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.262146
+Part.ActiveView().RotateAboutCenter 0.023889, -0.378656
+Part.ActiveView().RotateAboutCenter 0.023889, -0.211173
+Part.ActiveView().RotateAboutCenter 0.023889, -0.254864
+Part.ActiveView().RotateAboutCenter 0, -0.218455
+Part.ActiveView().RotateAboutCenter 0, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0517595, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.047778, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.0517595, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.031852, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.031852, 0.0946639
+Part.ActiveView().RotateAboutCenter 0, 0.145637
+Part.ActiveView().RotateAboutCenter 0, 0.1602
+Part.ActiveView().RotateAboutCenter 0, 0.0291273
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Handle.SLDPRT", 0.02867891816464, 0.005635075894207, 0.05292868637957
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Handle.SLDPRT", 0.02807652933188, 0.01598768102582, 0.04720889905172
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Latch.SLDPRT", 0.01811787240905, 0.02102774522616, 0.02941441158168
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Panel.SLDPRT", 0.04103171843354, 0.02154327950607, 0.07066479414101
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Shaft.SLDPRT", 0.01559318359028, -0.006917064099123, 0.03186820547558
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp Wheel.SLDPRT", 0.01050002302941, 0.00527385863484, 0.02307887636931
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Latch Shaft.SLDPRT", 0.01989610371913, 0.0137939995955, 0.04019806815791
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\PTFE WASHER (MC95630A425).SLDPRT", 0.02185422650456, -0.0001891175081301, 0.04336750733432
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\PTFE WASHER (MC95630A425).SLDPRT", 0.0229718105972, 0.005998331301233, 0.04553566558161
+Part.SetPickMode
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.023889, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.063704, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.0358335, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.031852, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.0358335, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0278705, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0278705, 0
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.031852, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.047778, 0.0509729
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.015926, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0364092
+boolstatus = Part.SetUserPreferenceToggle(6, False)
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0509729
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.015926, 0.00728184
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.01248343696773, 0.004574193883869, 0.02411186156087, True, 1, Nothing)
+Part.DeSelectByID "", "FACE", 0.0122194839455, 0.004796480916866, 0.02414204458825
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.01956626306259, -0.006514512927183, 0.03074769646406, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.005414184482959, 0.006742857600216, 0.001035695514418, True, 1, Nothing)
+Set Feature = Part.AddMate2 (1, 0, False, 0.03476851889928, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.01303850829424, 0.00728133522766, -0.001153157978649, False, 0, Nothing)
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.047778, 0
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0364092
+Part.ActiveView().RotateAboutCenter 0, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.007963, -0.087382
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.109228
+Part.ActiveView().RotateAboutCenter -0.015926, -0.152919
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.109228
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0509729
+Part.ActiveView().RotateAboutCenter 0, -0.0728184
+Part.ActiveView().RotateAboutCenter 0, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.116509
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0582547
+Part.ActiveView().RotateAboutCenter 0, -0.0728184
+Part.ActiveView().RotateAboutCenter 0, -0.116509
+Part.ActiveView().RotateAboutCenter 0, -0.043691
+Part.ActiveView().RotateAboutCenter 0, -0.0801002
+Part.ActiveView().RotateAboutCenter 0, -0.0728184
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0728184
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.123791
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0655365
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.043691
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.06868622508131, 0.006989476002104, 0.0002359543428838, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter 0, 0.0145637
+Part.ActiveView().RotateAboutCenter 0, 0.043691
+Part.ActiveView().RotateAboutCenter 0, 0.0728184
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0946639
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.087382
+Part.ActiveView().RotateAboutCenter 0, 0.0655365
+Part.ActiveView().RotateAboutCenter 0, 0.0946639
+Part.ActiveView().RotateAboutCenter 0, 0.087382
+Part.ActiveView().RotateAboutCenter 0, 0.0509729
+Part.ActiveView().RotateAboutCenter 0, 0.131073
+Part.ActiveView().RotateAboutCenter 0, 0.131073
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.145637
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.152919
+Part.ActiveView().RotateAboutCenter 0, 0.116509
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0946639
+Part.ActiveView().RotateAboutCenter 0.007963, 0.138355
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0946639
+Part.ActiveView().RotateAboutCenter 0, 0.043691
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.109228
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0145637
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.007112000000006, 0.00660681225478, 0.0007310633948521, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 1, False, 0.07579822508126, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0509729
+Part.ActiveView().RotateAboutCenter 0, -0.138355
+Part.ActiveView().RotateAboutCenter 0, -0.0218455
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.039815, -0.298555
+Part.ActiveView().RotateAboutCenter -0.023889, -0.182046
+Part.ActiveView().RotateAboutCenter 0, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.043691
+Part.ActiveView().RotateAboutCenter 0.015926, 0.0728184
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.131073
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.138355
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.167482
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.087382
+Part.ActiveView().RotateAboutCenter 0.015926, 0.0655365
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0582547
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0801002
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0946639
+Part.ActiveView().RotateAboutCenter 0.015926, 0.189328
+Part.ActiveView().RotateAboutCenter 0, 0.0946639
+Part.ActiveView().RotateAboutCenter 0, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.007963, -0.123791
+Part.ActiveView().RotateAboutCenter -0.007963, -0.123791
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.00728184
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.01191990961803, 0.004638425994173, 0.02412553420106, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.0003831678681649, 0.00684207306054, -0.001182015135441, True, 1, Nothing)
+Set Feature = Part.AddMate2 (1, 0, False, 0.0231794886867, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Right@Clamp Wheel-1@Assem2", "PLANE", 0, 0, 0, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("Right@Clamp Housing-1@Assem2", "PLANE", 0, 0, 0, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 0, False, 0.007325023029408, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, -0.109228
+Part.ActiveView().RotateAboutCenter 0, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter 0, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.19661
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0801002
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter 0, -0.0291273
+Part.ActiveView().RotateAboutCenter 0, -0.0218455
+Part.ActiveView().RotateAboutCenter 0, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0509729
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter 0, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+Part.ActiveView().RotateAboutCenter 0.007963, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.167482
+Part.ActiveView().RotateAboutCenter 0.039815, 0.218455
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.031852, 0.0801002
+Part.SetPickMode
+Part.SetPickMode
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.043691
+Part.ActiveView().RotateAboutCenter 0.071667, 0.567983
+Part.ActiveView().RotateAboutCenter 0.015926, 0.101946
+Part.ActiveView().RotateAboutCenter 0.055741, 0.1602
+Part.ActiveView().RotateAboutCenter 0.0597225, 0.043691
+Part.ActiveView().RotateAboutCenter 0.047778, 0.0509729
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.0801002
+Part.ActiveView().RotateAboutCenter 0.015926, 0.043691
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.015926, 0.043691
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.023889, 0
+Part.ActiveView().RotateAboutCenter 0.023889, 0
+Part.ActiveView().RotateAboutCenter 0.0278705, 0
+Part.ActiveView().RotateAboutCenter 0.039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0517595, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.031852, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.023889, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0801002
+Part.ActiveView().RotateAboutCenter 0, -0.0582547
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.015926, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, 0
+Part.ActiveView().RotateAboutCenter 0.031852, 0
+Part.ActiveView().RotateAboutCenter 0.0756485, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.039815, 0
+Part.ActiveView().RotateAboutCenter 0.047778, 0
+Part.ActiveView().RotateAboutCenter 0.023889, 0
+Part.ActiveView().RotateAboutCenter 0.007963, 0
+Part.ActiveView().RotateAboutCenter 0.015926, 0
+Part.ActiveView().RotateAboutCenter 0.007963, 0
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.003505296316519, 0.01635461154058, 0.00171347733496, False, 0, Nothing)
+Part.ActivateSelectedFeature
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.003424419540806, 0.01635751004846, 0.001697551291841, False, 0, Nothing)
+' MSGBOX
+' Editing a part is not allowed because the assembly has not been saved.  Please save the assembly before editing the part.
+
+Part.SaveAs2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp.SLDASM", 0, FALSE, FALSE
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.004288345031796, 0.01570858228206, 0.003824230271093, False, 0, Nothing)
+Part.EditPart
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.003889934812889, 0.01629719042955, 0.002002182409811, False, 0, Nothing)
+Part.ActivateSelectedFeature
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.003776405133124, 0.01628416995356, 0.002061810653373, False, 0, Nothing)
+Part.ClearSelection2 True
+Part.SelectionManager.EnableContourSelection = 0
+Part.SetPickMode
+Part.ClearSelection2 True
+Part.SetPickMode
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.1075, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.163241, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.127408, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0218455
+Part.EditAssembly
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.043691
+Part.ActiveView().RotateAboutCenter -0.0437965, -0.087382
+Part.ActiveView().RotateAboutCenter -0.039815, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.055741, -0.0655365
+Part.ActiveView().RotateAboutCenter -0.031852, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.047778, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.039815, -0.043691
+Part.ActiveView().RotateAboutCenter -0.047778, -0.043691
+Part.ActiveView().RotateAboutCenter -0.031852, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.0437965, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.031852, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.055741, -0.087382
+Part.ActiveView().RotateAboutCenter -0.063704, -0.138355
+Part.ActiveView().RotateAboutCenter -0.039815, -0.087382
+Part.ActiveView().RotateAboutCenter -0.039815, -0.116509
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.0278705, -0.116509
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0728184
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.031852, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0199075, 0
+Part.ActiveView().RotateAboutCenter 0.023889, 0
+Part.ActiveView().RotateAboutCenter 0.0358335, 0
+Part.ActiveView().RotateAboutCenter 0.023889, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.023889, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.039815, 0
+Part.ActiveView().RotateAboutCenter 0.0517595, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.123426, 0.0946639
+Part.ActiveView().RotateAboutCenter 0.087593, 0.087382
+Part.ActiveView().RotateAboutCenter 0.0756485, 0.116509
+Part.ActiveView().RotateAboutCenter 0.055741, 0.131073
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.101946
+Part.ActiveView().RotateAboutCenter 0.015926, 0.0728184
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0582547
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0582547
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.087382
+Part.ActiveView().RotateAboutCenter 0, 0.0509729
+Part.ActiveView().RotateAboutCenter 0, 0.0291273
+Part.ActiveView().RotateAboutCenter 0, 0.0655365
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.043691
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0801002
+Part.ActiveView().RotateAboutCenter -0.023889, 0.087382
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0801002
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0218455
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.015926, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.015926, 0
+Part.ActiveView().RotateAboutCenter 0.0358335, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0145637
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.02068983818259, 0.01379896587743, 0.0370945783156, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter 0, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.123791
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0218455
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.005646419431343, 0.01537706129628, 0.006793410205006, True, 1, Nothing)
+Set Feature = Part.AddMate2 (1, 1, False, 0.03631315917794, 0, 0, 1, 1, 1.570796326795, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.031852, -0.101946
+Part.ActiveView().RotateAboutCenter 0.023889, -0.131073
+Part.ActiveView().RotateAboutCenter 0, -0.189328
+Part.ActiveView().RotateAboutCenter 0, -0.087382
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0946639
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.145637
+Part.ActiveView().RotateAboutCenter 0.015926, -0.182046
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.043691
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.01503462618408, 0.01618941139301, 0.005621175920851, False, 0, Nothing)
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.02296062059042, 0.01575851159879, 0.006501138393276, False, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.02296062059042, 0.01596804684621, 0.00646841816075, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.0278705, 0.174764
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0728184
+Part.ActiveView().RotateAboutCenter 0, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.043691
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter 0, 0.087382
+Part.ActiveView().RotateAboutCenter 0, 0.109228
+Part.ActiveView().RotateAboutCenter 0, 0.182046
+Part.ActiveView().RotateAboutCenter 0, 0.131073
+Part.ActiveView().RotateAboutCenter 0, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.007963, 0.131073
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0801002
+Part.ActiveView().RotateAboutCenter -0.015926, 0.182046
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.047778, 0.0801002
+Part.ActiveView().RotateAboutCenter -0.0517595, 0.116509
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0946639
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.006350000000111, 0.01585251649402, 0.006613998069568, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 1, False, 0.0293106205904, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0517595, -0.138355
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0728184
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.02031795973107, 0.01791700174439, 0.03414101101058, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.002458451917789, 0.01619865845061, 0.005625235024382, True, 1, Nothing)
+Set Feature = Part.AddMate2 (1, 0, False, 0.02720579414073, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Right@Clamp Latch-1@Clamp", "PLANE", 0, 0, 0, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("Right@Clamp Housing-1@Clamp", "PLANE", 0, 0, 0, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 0, False, 0.01811787240905, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.07963, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.071667, 0
+Part.ActiveView().RotateAboutCenter -0.0437965, 0
+Part.ActiveView().RotateAboutCenter -0.0358335, 0
+Part.ActiveView().RotateAboutCenter -0.015926, 0
+Part.ActiveView().RotateAboutCenter -0.0278705, 0.0655365
+Part.ActiveView().RotateAboutCenter -0.039815, 0.138355
+Part.ActiveView().RotateAboutCenter -0.031852, 0.152919
+Part.ActiveView().RotateAboutCenter 0, 0.087382
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0509729
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0437965, 0
+Part.ActiveView().RotateAboutCenter 0.031852, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0119445, 0
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.047778, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0582547
+Part.ActiveView().RotateAboutCenter 0, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0728184
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.007963, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.015926, 0.138355
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.218455
+Part.ActiveView().RotateAboutCenter 0, 0.145637
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.047778, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.047778, -0.109228
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0946639
+Part.ActiveView().RotateAboutCenter 0, -0.225737
+Part.ActiveView().RotateAboutCenter 0, -0.043691
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0278705, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.055741, -0.1602
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.015926, 0.043691
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.043691
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.02374955144023, 0.01638370272568, 0.04652099944019, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.002787163303765, 0.008939592393432, 0.00656373376313, True, 1, Nothing)
+Set Feature = Part.AddMate2 (1, 0, False, 0.04180371778621, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.19661
+Part.ActiveView().RotateAboutCenter -0.007963, -0.327683
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.211173
+Part.ActiveView().RotateAboutCenter 0, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.131073
+Part.ActiveView().RotateAboutCenter 0, -0.152919
+Part.ActiveView().RotateAboutCenter 0, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.007963, 0
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.02794952933189, 0.01002075405296, 0.00564014910708, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0801002
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.218455
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0946639
+Part.ActiveView().RotateAboutCenter -0.015926, 0.087382
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.203891
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.313119
+Part.ActiveView().RotateAboutCenter 0, 0.313119
+Part.ActiveView().RotateAboutCenter -0.015926, 0.087382
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0801002
+Part.ActiveView().RotateAboutCenter 0, 0.0946639
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.003174999999828, 0.009467275462214, 0.002627711017311, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 1, False, 0.02477452933188, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+Part.ActiveView().RotateAboutCenter 0.055741, -0.211173
+Part.ActiveView().RotateAboutCenter 0.047778, -0.444192
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.023889, -0.087382
+Part.ActiveView().RotateAboutCenter 0.023889, -0.138355
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.138355
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.152919
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.043691
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0582547
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter 0, 0.043691
+Part.ActiveView().RotateAboutCenter 0, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0801002
+Part.ActiveView().RotateAboutCenter 0.055741, 0.087382
+Part.ActiveView().RotateAboutCenter 0.055741, 0.0655365
+Part.ActiveView().RotateAboutCenter 0.007963, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.015926, 0
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0145637
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.02622260436303, 0.005935053165217, 0.05219380360012, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.182046
+Part.ActiveView().RotateAboutCenter -0.023889, 0.240301
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.015926, 0.123791
+Part.ActiveView().RotateAboutCenter -0.015926, 0.101946
+Part.ActiveView().RotateAboutCenter -0.023889, 0.123791
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.087382
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0291273
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.002151326537557, 0.02162553562016, 0.005212922270687, True, 1, Nothing)
+Set Feature = Part.AddMate2 (1, 0, False, 0.05092614839888, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0358335, -0.254864
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.364092
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.101946
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0582547
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.0358335, -0.174764
+Part.ActiveView().RotateAboutCenter 0.015926, -0.109228
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.087382
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.015926, -0.087382
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0582547
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0801002
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.023889, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.031852, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, 0.00728184
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.02855191816468, 0.02288035800871, 0.004961053454622, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter 0, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.393219
+Part.ActiveView().RotateAboutCenter 0.0437965, 0.327683
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0946639
+Part.ActiveView().RotateAboutCenter 0, 0.0218455
+Part.ActiveView().RotateAboutCenter 0, 0.101946
+Part.ActiveView().RotateAboutCenter 0, 0.509729
+Part.ActiveView().RotateAboutCenter 0, 0.291273
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.247582
+Part.ActiveView().RotateAboutCenter -0.031852, 0.27671
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0728184
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.109228
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0509729
+Part.ActiveView().RotateAboutCenter 0, 0.0145637
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.003174999999885, 0.01847234028962, 0.002985475334086, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 1, False, 0.02537691816464, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.015926, -0.320401
+Part.ActiveView().RotateAboutCenter -0.007963, -0.19661
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0, -0.145637
+Part.ActiveView().RotateAboutCenter 0, -0.101946
+Part.ActiveView().RotateAboutCenter 0, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0597225, -0.0728184
+Part.ActiveView().RotateAboutCenter -0.0995375, -0.247582
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0728184
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.138355
+Part.ActiveView().RotateAboutCenter -0.007963, 0.101946
+Part.ActiveView().RotateAboutCenter 0, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0509729
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.02147915504787, 0.005690832665152, 0.04558974378671, True, 1, Nothing)
+Part.ActiveView().TranslateBy -0.00571921, 0.0014298
+Part.ActiveView().TranslateBy -0.0614815, 0.0145363
+Part.ActiveView().TranslateBy -0.0328854, 0.00905541
+Part.ActiveView().TranslateBy -0.0042894, 0.00762561
+Part.ActiveView().TranslateBy -0.0004766, 0.00571921
+Part.ActiveView().TranslateBy 0.0002383, 0.0016681
+Part.ActiveView().TranslateBy -0.0004766, 0.000714901
+Part.ActiveView().TranslateBy -0.0019064, 0.002383
+Part.ActiveView().TranslateBy -0.0014298, 0.0021447
+Part.ActiveView().TranslateBy 0.0002383, 0.0002383
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.004255192566063, 0.01612807370566, 0.005597675095657, True, 1, Nothing)
+Set Feature = Part.AddMate2 (1, 1, False, 0.04278598611197, 0, 0, 1, 1, 1.570796326795, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter 0, -0.152919
+Part.ActiveView().RotateAboutCenter -0.0358335, -0.327683
+Part.ActiveView().RotateAboutCenter -0.023889, -0.27671
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.087382
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.031852, -0.043691
+Part.ActiveView().RotateAboutCenter -0.015926, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0728184
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0655365
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.02297181059721, 0.01344504278467, 0.006555087545621, True, 1, Nothing)
+Part.ActiveView().TranslateBy 0.0002383, 0.0002383
+Part.ActiveView().TranslateBy 0.00834051, 0.0004766
+Part.ActiveView().TranslateBy 0.0150129, 0
+Part.ActiveView().TranslateBy 0.0050043, 0.000953201
+Part.ActiveView().TranslateBy 0.00738731, 0
+Part.ActiveView().TranslateBy 0.0102469, -0.0016681
+Part.ActiveView().TranslateBy 0.0109618, -0.0021447
+Part.ActiveView().TranslateBy 0.00619581, -0.0011915
+Part.ActiveView().TranslateBy 0.000714901, -0.0002383
+Part.ActiveView().TranslateBy 0.002383, -0.0002383
+Part.ActiveView().TranslateBy 0.0016681, -0.000714901
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0676855, 0.473319
+Part.ActiveView().RotateAboutCenter 0.07963, 0.575265
+Part.ActiveView().RotateAboutCenter 0.063704, 0.349528
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.123791
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.0509729
+Part.ActiveView().RotateAboutCenter 0.031852, 0.0582547
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.101946
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.152919
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.003174999999885, 0.01783203667285, 0.005516959414649, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 1, False, 0.0197968105972, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter 0, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.043691
+Part.ActiveView().RotateAboutCenter -0.023889, -0.116509
+Part.ActiveView().RotateAboutCenter -0.055741, -0.233019
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.0517595, -0.203891
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.101946
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.02475446583219, 0.001102871981772, 0.04335760674297, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter -0.007963, 0
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.015926, -0.043691
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.004378647784392, 0.007238720783789, -0.001163277118508, True, 1, Nothing)
+Set Feature = Part.AddMate2 (1, 1, False, 0.04476085127369, 0, 0, 1, 1, 1.570796326795, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.071667, -0.291273
+Part.ActiveView().RotateAboutCenter -0.0597225, -0.19661
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.031852, -0.101946
+Part.ActiveView().RotateAboutCenter -0.0517595, -0.225737
+Part.ActiveView().RotateAboutCenter -0.0278705, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.043691
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0145637
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.02185422650462, 0.005106356332149, 0.001767481265574, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter 0, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, 0.167482
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.327683
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.182046
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0946639
+Part.ActiveView().RotateAboutCenter 0.007963, 0.116509
+Part.ActiveView().RotateAboutCenter 0, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.087382
+Part.ActiveView().RotateAboutCenter 0.039815, 0.1602
+Part.ActiveView().RotateAboutCenter 0.023889, 0.211173
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.043691
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.0218455
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.003174999999885, 0.005070726807972, -0.004230848964482, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 1, False, 0.01867922650456, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0836115, -0.283992
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.007963, -0.109228
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.087382
+Part.ActiveView().RotateAboutCenter -0.023889, -0.211173
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.101946
+Part.ActiveView().RotateAboutCenter -0.031852, -0.043691
+Part.ActiveView().RotateAboutCenter -0.055741, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.095556, -0.240301
+Part.ActiveView().RotateAboutCenter -0.0437965, -0.152919
+boolstatus = Part.Extension.SelectByID("Right@Clamp Panel-1@Clamp", "PLANE", 0, 0, 0, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("Right@Clamp Housing-1@Clamp", "PLANE", 0, 0, 0, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.043691
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.087382
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0728184
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.0039815, 0
+Part.ActiveView().RotateAboutCenter -0.0039815, 0
+Part.ActiveView().RotateAboutCenter -0.023889, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.015926, 0
+Set Feature = Part.AddMate2 (0, 0, False, 0.03614221843354, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Top@Clamp Housing-1@Clamp", "PLANE", 0, 0, 0, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("Top@Clamp Panel-1@Clamp", "PLANE", 0, 0, 0, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter 0.007963, 0
+Part.ActiveView().RotateAboutCenter 0.0597225, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.031852, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.015926, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.015926, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, 0
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0119445, 0
+Part.ActiveView().RotateAboutCenter 0.015926, 0
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0, -0.0218455
+Part.ActiveView().RotateAboutCenter 0, -0.0655365
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0291273
+Part.ActiveView().RotateAboutCenter 0, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0728184
+Part.ActiveView().RotateAboutCenter 0, -0.109228
+Part.ActiveView().RotateAboutCenter 0, -0.0946639
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0509729
+Part.ActiveView().RotateAboutCenter 0, -0.043691
+Part.ActiveView().RotateAboutCenter 0, -0.087382
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.007963, -0.043691
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0728184
+Part.ActiveView().RotateAboutCenter 0, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.00728184
+Set Feature = Part.AddMate2 (0, 0, False, 0.07066479414101, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Front@Clamp Housing-1@Clamp", "PLANE", 0, 0, 0, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("Front@Clamp Panel-1@Clamp", "PLANE", 0, 0, 0, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 0, False, 0.009224279506073, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.015926, 0.393219
+Part.ActiveView().RotateAboutCenter 0, 0.611674
+Part.ActiveView().RotateAboutCenter 0, 0.364092
+Part.ActiveView().RotateAboutCenter -0.007963, 0.138355
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.043691
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0801002
+Part.ActiveView().RotateAboutCenter -0.0278705, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.055741, 0.043691
+Part.ActiveView().RotateAboutCenter -0.0676855, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.0597225, 0.0728184
+Part.ActiveView().RotateAboutCenter -0.0597225, 0.0946639
+Part.ActiveView().RotateAboutCenter -0.031852, 0.0655365
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.007963, 0.233019
+Part.ActiveView().RotateAboutCenter 0.023889, 0.415065
+Part.ActiveView().RotateAboutCenter 0.0597225, 0.473319
+Part.ActiveView().RotateAboutCenter 0.0597225, 0.538856
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.247582
+Part.ActiveView().RotateAboutCenter 0, 0.0946639
+Part.ActiveView().RotateAboutCenter 0, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0517595, -0.138355
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.546138
+Part.ActiveView().RotateAboutCenter -0.0995375, -0.742747
+Part.ActiveView().RotateAboutCenter -0.0676855, -0.211173
+Part.ActiveView().RotateAboutCenter -0.0437965, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.0655365
+Part.ActiveView().RotateAboutCenter 0.0836115, 0.182046
+Part.ActiveView().RotateAboutCenter 0.015926, 0.043691
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0291273
+Part.ActiveView().RotateAboutCenter 0, 0.087382
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.189328
+Part.ActiveView().RotateAboutCenter 0, 0.211173
+Part.ActiveView().RotateAboutCenter -0.039815, 0.152919
+Part.ActiveView().RotateAboutCenter -0.063704, 0.116509
+Part.ActiveView().RotateAboutCenter -0.0517595, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0509729
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0509729
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0218455
+Part.ActiveView().RotateAboutCenter 0, -0.0218455
+Part.ActiveView().RotateAboutCenter 0, -0.385937
+Part.ActiveView().RotateAboutCenter -0.0358335, -0.334965
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.131073
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0655365
+Part.ActiveView().RotateAboutCenter -0.0278705, -0.167482
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.225737
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0728184
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.043691
+Part.ActiveView().RotateAboutCenter 0.055741, -0.043691
+Part.ActiveView().RotateAboutCenter 0.087593, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0437965, 0
+Part.ActiveView().RotateAboutCenter 0.0517595, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0358335, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.047778, -0.109228
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.0145637
+Part.ActiveView().RotateAboutCenter 0, 0.0582547
+Part.ActiveView().RotateAboutCenter 0, 0.0582547
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0728184
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0946639
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.043691
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0218455
+Part.ActiveView().RotateAboutCenter 0, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.007963, -0.109228
+Part.ActiveView().RotateAboutCenter 0, -0.123791
+Part.ActiveView().RotateAboutCenter 0, -0.247582
+Part.ActiveView().RotateAboutCenter 0, -0.138355
+Part.ActiveView().RotateAboutCenter 0, -0.1602
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.116509
+Part.ActiveView().RotateAboutCenter 0.023889, -0.152919
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0291273
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\90 TORSION SPRING (LTR012A01M).SLDPRT", 0.03091634727535, 0.02802821764394, 0.007961083192299
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\180 TORSION SPRING (LTR018C02M).SLDPRT", 0.04704378251215, 0.03249770048542, 0.009861712061365
+Part.SetPickMode
+Part.SetPickMode
+Part.ActiveView().RotateAboutCenter 0.0199075, 0
+Part.ActiveView().RotateAboutCenter 0.047778, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.039815, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.063704, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0597225, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0676855, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0836115, -0.043691
+Part.ActiveView().RotateAboutCenter 0.095556, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.095556, -0.043691
+Part.ActiveView().RotateAboutCenter 0.047778, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0437965, 0
+Part.ActiveView().RotateAboutCenter 0.055741, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.047778, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.055741, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0517595, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0676855, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0358335, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.015926, -0.00728184
+boolstatus = Part.SetUserPreferenceToggle(4, True)
+Part.ActiveView().RotateAboutCenter -0.007963, 0
+Part.ActiveView().RotateAboutCenter -0.0278705, 0.0728184
+Part.ActiveView().RotateAboutCenter -0.039815, 0.116509
+Part.ActiveView().RotateAboutCenter -0.0437965, 0.131073
+Part.ActiveView().RotateAboutCenter -0.039815, 0.131073
+Part.ActiveView().RotateAboutCenter -0.0437965, 0.152919
+Part.ActiveView().RotateAboutCenter -0.031852, 0.101946
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.0278705, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.0509729
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0278705, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.039815, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0119445, 0
+Part.ActiveView().RotateAboutCenter -0.0039815, 0
+boolstatus = Part.Extension.SelectByID("Axis1@90 TORSION SPRING (LTR012A01M)-1@Clamp", "AXIS", 0, 0, 0, False, 0, Nothing)
+Part.UnBlankRefGeom
+boolstatus = Part.Extension.SelectByID("Axis1@180 TORSION SPRING (LTR018C02M)-1@Clamp", "AXIS", 0, 0, 0, False, 0, Nothing)
+Part.UnBlankRefGeom
+Part.SetPickMode
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.023889, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0437965, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0358335, 0
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, 0
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.007963, -0.101946
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.123791
+Part.ActiveView().RotateAboutCenter 0, -0.116509
+Part.ActiveView().RotateAboutCenter -0.015926, -0.109228
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0728184
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0655365
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.043691
+Part.ActiveView().RotateAboutCenter -0.023889, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.055741, -0.123791
+Part.ActiveView().RotateAboutCenter -0.0358335, -0.0728184
+Part.ActiveView().RotateAboutCenter -0.039815, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.047778, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.039815, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.0517595, -0.0655365
+Part.ActiveView().RotateAboutCenter -0.055741, -0.138355
+Part.ActiveView().RotateAboutCenter -0.0358335, -0.109228
+Part.ActiveView().RotateAboutCenter -0.0358335, -0.101946
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, 0
+Part.ActiveView().RotateAboutCenter 0.023889, -0.087382
+Part.ActiveView().RotateAboutCenter 0.023889, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.0582547
+Part.ActiveView().RotateAboutCenter 0.031852, 0.0728184
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.087382
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.131073
+Part.ActiveView().RotateAboutCenter 0.015926, 0.123791
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.043691
+Part.ActiveView().RotateAboutCenter 0, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0655365
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0728184
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.087382
+Part.ActiveView().RotateAboutCenter 0, 0.043691
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.043691
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0364092
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0509729
+Part.ActiveView().RotateAboutCenter 0, 0.0655365
+Part.ActiveView().RotateAboutCenter 0, 0.0946639
+Part.ActiveView().RotateAboutCenter 0.007963, 0.087382
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.043691
+Part.ActiveView().RotateAboutCenter 0.007963, 0.043691
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0582547
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0582547
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0946639
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0509729
+Part.ActiveView().RotateAboutCenter 0.007963, 0.043691
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.043691
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0509729
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0509729
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0218455
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.006349999999941, 0.01860184298093, -0.01171951026618, False, 0, Nothing)
+Part.HideComponent2
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.003174999999999, 0.0108801369164, 0.0001403542272556, False, 0, Nothing)
+Part.HideComponent2
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Clamp Handle-1@Clamp", "COMPONENT", 0, 0, 0, False, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Clamp Handle-2@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Clamp Latch-1@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Annotations@Clamp Latch-1@Clamp", "DCABINET", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Unknown", "BROWSERITEM", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Solid Bodies", "BDYFOLDER", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Top@Clamp Latch-1@Clamp", "PLANE", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Front@Clamp Latch-1@Clamp", "PLANE", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Right@Clamp Latch-1@Clamp", "PLANE", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Point1@Origin@Clamp Latch-1@Clamp", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Extrude1@Clamp Latch-1@Clamp", "BODYFEATURE", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Sketch2@Clamp Latch-1@Clamp", "SKETCH", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Cut-Extrude1@Clamp Latch-1@Clamp", "BODYFEATURE", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Fillet1@Clamp Latch-1@Clamp", "BODYFEATURE", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Clamp Panel-1@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Clamp Shaft-1@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Clamp Wheel-1@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Latch Shaft-1@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("PTFE WASHER (MC95630A425)-1@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("PTFE WASHER (MC95630A425)-2@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("PTFE WASHER (MC95630A425)-2@Clamp", "COMPONENT", 0, 0, 0, False, 0, Nothing)
+Part.HideComponent2
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.031852, 0.0728184
+Part.ActiveView().RotateAboutCenter -0.031852, 0.087382
+Part.ActiveView().RotateAboutCenter -0.031852, 0.0509729
+Part.ActiveView().RotateAboutCenter -0.031852, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.015926, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.047778, 0
+Part.ActiveView().RotateAboutCenter 0.0517595, 0
+Part.ActiveView().RotateAboutCenter 0.023889, 0
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+boolstatus = Part.Extension.SelectByID("Clamp Handle-1@Clamp", "COMPONENT", 0, 0, 0, False, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Clamp Handle-2@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Clamp Handle-2@Clamp", "COMPONENT", 0, 0, 0, False, 0, Nothing)
+Part.HideComponent2
+Part.ClearSelection2 True
+Part.SetPickMode
+Part.SetPickMode
+boolstatus = Part.Extension.SelectByID("Axis1@180 TORSION SPRING (LTR018C02M)-1@Clamp", "AXIS", 0.001691225544306, 0.0287952384651, 0.03758248889431, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0278705, 0
+Part.ActiveView().RotateAboutCenter -0.039815, 0.043691
+Part.ActiveView().RotateAboutCenter -0.039815, 0.0509729
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0145637
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.005905138778758, 0.006967470319887, 0.001063480536232, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.007963, -0.706338
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0145637
+Set Feature = Part.AddMate2 (1, 1, False, 0.008798087061365, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, 0.109228
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.218455
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.218455
+Part.ActiveView().RotateAboutCenter 0.023889, 0.167482
+Part.ActiveView().RotateAboutCenter 0, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.031852, 0.043691
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.015926, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, 0
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.0517595, -0.145637
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0509729
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.05083794924451, -0.002705305501024, 0.001792257238264, False, 0, Nothing)
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.0004230705997657, 0.003015589002914, 0.0003412438172177, False, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Front@180 TORSION SPRING (LTR018C02M)-1@Clamp", "PLANE", 0, 0, 0, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.004953, 0.005489950329448, 0.001029837147883, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter 0, 0.0145637
+Part.ActiveView().RotateAboutCenter 0, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.043691
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.015926, 0
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Set Feature = Part.AddMate2 (5, 0, True, 0.000127, 0.000127, 0.000127, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter -0.023889, 0.043691
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0218455
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.00113339212777, 0.0002567309387018, -0.003219229967954, False, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Axis1@90 TORSION SPRING (LTR012A01M)-1@Clamp", "AXIS", -0.0003473927748941, 0.02380682224012, 0.03159541085973, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.005030152793893, 0.01582670896123, 0.007014998900729, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0582547
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0291273
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Set Feature = Part.AddMate2 (1, 0, False, 0.005033584749027, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Front@90 TORSION SPRING (LTR012A01M)-1@Clamp", "PLANE", 0, 0, 0, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.043691
+Part.ActiveView().RotateAboutCenter 0, -0.101946
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.015926, -0.182046
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0655365
+Part.ActiveView().RotateAboutCenter 0, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0728184
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0039815, 0
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.031852, -0.138355
+Part.ActiveView().RotateAboutCenter -0.0358335, -0.109228
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.023889, -0.101946
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0728184
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0291273
+Part.ActiveView().RotateAboutCenter 0, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0728184
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.087382
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0509729
+Part.ActiveView().RotateAboutCenter 0, 0.123791
+Part.ActiveView().RotateAboutCenter 0.015926, 0.225737
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.182046
+Part.ActiveView().RotateAboutCenter 0.031852, 0.182046
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.1602
+Part.ActiveView().RotateAboutCenter 0.031852, 0.087382
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.0946639
+Part.ActiveView().RotateAboutCenter 0.031852, 0.0582547
+Part.ActiveView().RotateAboutCenter 0.0676855, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.0278705, 0
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.004267200000129, 0.01487173386924, 0.008006446224869, True, 1, Nothing)
+Set Feature = Part.AddMate2 (5, 0, True, 0.000127, 0.000127, 0.000127, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.002744845213329, 0.01473533002834, 6.60907268184e-005, False, 0, Nothing)
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0509729
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.0278705, 0.152919
+Part.ActiveView().RotateAboutCenter -0.0278705, 0.138355
+Part.ActiveView().RotateAboutCenter -0.015926, 0.087382
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0509729
+Part.ActiveView().RotateAboutCenter 0, 0.0801002
+Part.ActiveView().RotateAboutCenter 0.023889, 0.101946
+Part.ActiveView().RotateAboutCenter 0.023889, 0.152919
+Part.ActiveView().RotateAboutCenter 0.015926, 0.116509
+Part.ActiveView().RotateAboutCenter 0.015926, 0.0509729
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0728184
+Part.ActiveView().RotateAboutCenter 0.0437965, 0.087382
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.0358335, -0.233019
+Part.ActiveView().RotateAboutCenter -0.023889, -0.123791
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0, -0.043691
+Part.ActiveView().RotateAboutCenter 0, -0.087382
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0946639
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.109228
+Part.ActiveView().RotateAboutCenter 0.007963, -0.087382
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.007963, -0.087382
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.047778, 0.145637
+Part.ActiveView().RotateAboutCenter -0.015926, 0.0509729
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.043691
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.138355
+Part.ActiveView().RotateAboutCenter -0.0437965, 0.167482
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0728184
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.015926, -0.043691
+Part.ActiveView().RotateAboutCenter 0, -0.0364092
+Part.ActiveView().RotateAboutCenter 0, -0.19661
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.152919
+Part.ActiveView().RotateAboutCenter -0.007963, -0.138355
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.1602
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.189328
+Part.ActiveView().RotateAboutCenter 0, -0.254864
+Part.ActiveView().RotateAboutCenter -0.007963, -0.203891
+Part.ActiveView().RotateAboutCenter 0, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0364092
+Part.ActiveView().RotateAboutCenter 0, -0.334965
+Part.ActiveView().RotateAboutCenter -0.007963, -0.458756
+Part.ActiveView().RotateAboutCenter -0.0278705, -0.400501
+Part.ActiveView().RotateAboutCenter 0, -0.131073
+Part.ActiveView().RotateAboutCenter 0, -0.116509
+Part.ActiveView().RotateAboutCenter 0, -0.116509
+Part.ActiveView().RotateAboutCenter 0, -0.19661
+Part.ActiveView().RotateAboutCenter 0, -0.131073
+Part.ActiveView().RotateAboutCenter 0, -0.174764
+Part.ActiveView().RotateAboutCenter 0, -0.1602
+Part.ActiveView().RotateAboutCenter 0, -0.145637
+Part.ActiveView().RotateAboutCenter 0, -0.116509
+Part.ActiveView().RotateAboutCenter 0, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.218455
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.502447
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.233019
+Part.ActiveView().RotateAboutCenter 0.023889, 0.167482
+Part.ActiveView().RotateAboutCenter 0.055741, 0.487883
+Part.ActiveView().RotateAboutCenter 0.031852, 0.480601
+Part.ActiveView().RotateAboutCenter 0.031852, 0.415065
+Part.ActiveView().RotateAboutCenter 0.023889, 0.269428
+Part.ActiveView().RotateAboutCenter 0, 0.247582
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.233019
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.262146
+Part.ActiveView().RotateAboutCenter 0.015926, 0.225737
+boolstatus = Part.Extension.SelectByID("Clamp Handle-1@Clamp", "COMPONENT", 0, 0, 0, False, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("PTFE WASHER (MC95630A425)-2@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("PTFE WASHER (MC95630A425)-2@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("PTFE WASHER (MC95630A425)-1@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("PTFE WASHER (MC95630A425)-2@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("PTFE WASHER (MC95630A425)-2@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Clamp Handle-1@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Clamp Handle-2@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Clamp Latch-1@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Clamp Panel-1@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Clamp Shaft-1@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Clamp Wheel-1@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Latch Shaft-1@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("PTFE WASHER (MC95630A425)-1@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("PTFE WASHER (MC95630A425)-2@Clamp", "COMPONENT", 0, 0, 0, True, 0, Nothing)
+boolstatus = Part.Extension.SelectByID("Clamp Handle-1@Clamp", "COMPONENT", 0, 0, 0, False, 0, Nothing)
+Part.ShowComponent2
+Part.SetPickMode
+Part.ClearSelection2 True
+Part.SetPickMode
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.047778, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.103519, -0.1602
+Part.ActiveView().RotateAboutCenter -0.139352, -0.320401
+Part.ActiveView().RotateAboutCenter -0.047778, -0.109228
+Part.ActiveView().RotateAboutCenter -0.023889, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.039815, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, 0
+Part.ActiveView().RotateAboutCenter -0.0278705, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.023889, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.023889, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter 0, -0.0218455
+Part.ActiveView().RotateAboutCenter 0, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0517595, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0676855, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+' MSGBOX
+' Some of the models referenced in this document have been modified.  They must be saved when the document is saved.
+' 		Save the document and the referenced models now?
+
+Part.Save2 FALSE
+Set Part = Nothing
+swApp.CloseDoc "Clamp.SLDASM"
+swApp.ActiveDoc.ActiveView.FrameLeft = 88
+swApp.ActiveDoc.ActiveView.FrameTop = 116
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Clamp Housing.SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = Nothing
+swApp.CloseDoc "Clamp Housing.SLDPRT"
+swApp.ActiveDoc.ActiveView.FrameLeft = 198
+swApp.ActiveDoc.ActiveView.FrameTop = 261
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Index-Bridge.SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameLeft = 198
+swApp.ActiveDoc.ActiveView.FrameTop = 261
+swApp.ActiveDoc.ActiveView.FrameLeft = 198
+swApp.ActiveDoc.ActiveView.FrameTop = 261
+swApp.ActiveDoc.ActiveView.FrameState = 2
+swApp.ActiveDoc.ActiveView.FrameLeft = 198
+swApp.ActiveDoc.ActiveView.FrameTop = 261
+Set Part = swApp.ActivateDoc ("Clamp Wheel.SLDPRT")
+Set Part = Nothing
+swApp.CloseDoc "Clamp Wheel.SLDPRT"
+Set Part = swApp.ActivateDoc ("Clamp Shaft.SLDPRT")
+Set Part = Nothing
+swApp.CloseDoc "Clamp Shaft.SLDPRT"
+Set Part = swApp.ActivateDoc ("Clamp Panel.SLDPRT")
+Set Part = Nothing
+swApp.CloseDoc "Clamp Panel.SLDPRT"
+Set Part = swApp.ActivateDoc ("Clamp Latch.SLDPRT")
+Set Part = Nothing
+swApp.CloseDoc "Clamp Latch.SLDPRT"
+Set Part = swApp.ActivateDoc ("Clamp Handle.SLDPRT")
+Set Part = Nothing
+swApp.CloseDoc "Clamp Handle.SLDPRT"
+Set Part = swApp.ActivateDoc ("Bushing.SLDPRT")
+Set Part = Nothing
+swApp.CloseDoc "Bushing.SLDPRT"
+Set Part = swApp.ActivateDoc ("Arm.SLDPRT")
+Set Part = Nothing
+swApp.CloseDoc "Arm.SLDPRT"
+Set Part = swApp.ActivateDoc ("Arm Contact Shaft.SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameState = 0
+Set Part = Nothing
+swApp.CloseDoc "Arm Contact Shaft.SLDPRT"
+Set Part = swApp.ActivateDoc ("PTFE WASHER (MC95630A425).SLDPRT")
+Set Part = Nothing
+swApp.CloseDoc "PTFE WASHER (MC95630A425).SLDPRT"
+Set Part = swApp.ActivateDoc ("Latch Shaft.SLDPRT")
+Set Part = Nothing
+swApp.CloseDoc "Latch Shaft.SLDPRT"
+Set Part = swApp.ActivateDoc ("Index-Bridge.SLDPRT")
+swApp.ActiveDoc.ActiveView.FrameLeft = 198
+swApp.ActiveDoc.ActiveView.FrameTop = 261
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Part.SaveAs2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Bridge.SLDPRT", 0, FALSE, FALSE
+swApp.LoadFile2 "C:\Program Files\SolidWorks\data\templates\AuroraAssembly.asmdot", ""
+Set Part = swApp.ActiveDoc
+swApp.ActiveDoc.ActiveView.FrameLeft = 0
+swApp.ActiveDoc.ActiveView.FrameTop = 0
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.NewDocument ("C:\Program Files\SolidWorks\data\templates\AuroraAssembly.asmdot", 0, 0.000000, 0.000000)
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Bridge.SLDPRT", -0.0004750267577656, 0.03138592650276, 0.01934028280095
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.023889, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0199075, -0.043691
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0218455
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.101946
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0801002
+Part.ActiveView().RotateAboutCenter 0, -0.043691
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0509729
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0291273
+Part.ActiveView().RotateAboutCenter 0, -0.0364092
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter 0, -0.0291273
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter 0, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.023889, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.015926, 0
+Part.ActiveView().RotateAboutCenter 0.0119445, 0
+Part.ActiveView().RotateAboutCenter 0.007963, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.015926, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0582547
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0728184
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.043691
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0655365
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.0291273
+Part.ActiveView().RotateAboutCenter 0, 0.0509729
+Part.ActiveView().RotateAboutCenter 0, 0.0291273
+Part.ActiveView().RotateAboutCenter 0, 0.043691
+Part.ActiveView().RotateAboutCenter 0, 0.0655365
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0291273
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, 0
+Part.ActiveView().RotateAboutCenter -0.0039815, 0
+Part.ActiveView().RotateAboutCenter -0.015926, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.015926, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, 0
+Part.ActiveView().RotateAboutCenter -0.007963, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.007963, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.0145637
+boolstatus = Part.Extension.SelectByID("Bridge-1@Assem3", "COMPONENT", 0, 0, 0, False, 0, Nothing)
+Part.UnfixComponent
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Front Plane", "PLANE", 0, 0, 0, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("Front@Bridge-1@Assem3", "PLANE", 0, 0, 0, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 0, False, 0.03138592650276, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Right Plane", "PLANE", 0, 0, 0, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("Right@Bridge-1@Assem3", "PLANE", 0, 0, 0, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 0, False, 0.0004750267577656, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.02812630720979, 0.0005243946306166, 0.02251528280092, False, 0, Nothing)
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Arm.SLDASM", 0.008955806029519, 0.04160479875472, 0.03356079515765
+Part.AddComponent "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Clamp.SLDASM", 0.003505136354704, 0.01666931047788, -0.003115158225029
+boolstatus = Part.Extension.SelectByID("Top Plane@Clamp-1@Assem3", "PLANE", 0, 0, 0, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("Front Plane", "PLANE", 0, 0, 0, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.087593, -0.0655365
+Part.ActiveView().RotateAboutCenter -0.0358335, -0.0364092
+Part.ActiveView().RotateAboutCenter -0.0517595, -0.0655365
+Part.ActiveView().RotateAboutCenter -0.023889, -0.043691
+Part.ActiveView().RotateAboutCenter -0.039815, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.0119445, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.043691
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.023889, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.023889, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.031852, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.031852, 0.087382
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.138355
+Part.ActiveView().RotateAboutCenter 0.031852, 0.123791
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0728184
+Part.ActiveView().RotateAboutCenter -0.007963, 0.101946
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0582547
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0509729
+Part.ActiveView().RotateAboutCenter -0.015926, 0.043691
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.0278705, -0.0291273
+Set Feature = Part.AddMate2 (0, 1, False, 0, 0, 0, 1, 1, 1.570796326795, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.ActiveView().RotateAboutCenter -0.0119445, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0946639
+Part.ActiveView().RotateAboutCenter -0.0278705, 0.087382
+Part.ActiveView().RotateAboutCenter -0.0597225, 0.182046
+Part.ActiveView().RotateAboutCenter -0.0437965, 0.233019
+Part.ActiveView().RotateAboutCenter -0.023889, 0.109228
+Part.ActiveView().RotateAboutCenter -0.023889, 0.182046
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.131073
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.203891
+Part.ActiveView().RotateAboutCenter 0.023889, 0.233019
+Part.ActiveView().RotateAboutCenter 0.007963, 0.145637
+boolstatus = Part.Extension.SelectByID("", "FACE", -0.005448363645257, 0.001128378087515, 0.01607041230506, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+Part.ActiveView().RotateAboutCenter 0.0676855, -0.451474
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.560701
+Part.ActiveView().RotateAboutCenter 0.023889, -0.247582
+Part.ActiveView().RotateAboutCenter 0.015926, -0.19661
+Part.ActiveView().RotateAboutCenter 0.015926, -0.233019
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.015926, -0.087382
+Part.ActiveView().RotateAboutCenter 0.023889, -0.152919
+Part.ActiveView().RotateAboutCenter 0.007963, -0.043691
+Part.ActiveView().RotateAboutCenter -0.007963, -0.00728184
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.06349999999981, -6.592935972094e-005, 0.04433211270913, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 1, False, 0.0689483636453, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.04435170384966, 0.002406838192286, 0.04709305667031, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter 0.111482, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.179167, 0.043691
+Part.ActiveView().RotateAboutCenter 0.0915745, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.055741, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.06578045992597, 0.0015770223619, 0.02324134500043, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 0, False, 0.0238517116698, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Top Plane", "PLANE", 0, 0, 0, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("Front Plane@Clamp-1@Assem3", "PLANE", 0, 0, 0, True, 1, Nothing)
+Part.ActiveView().RotateAboutCenter -0.0358335, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.1075, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.1075, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.07963, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.0836115, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.0756485, -0.0655365
+Part.ActiveView().RotateAboutCenter -0.0597225, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.071667, -0.101946
+Part.ActiveView().RotateAboutCenter -0.0358335, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.039815, -0.109228
+Part.ActiveView().RotateAboutCenter 0.055741, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0597225, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.063704, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0676855, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.055741, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.071667, -0.0946639
+Part.ActiveView().RotateAboutCenter 0.063704, -0.087382
+Part.ActiveView().RotateAboutCenter 0.0358335, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0358335, -0.0728184
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0145637
+Part.ActiveView().RotateAboutCenter 0, -0.00728184
+Set Feature = Part.AddMate2 (0, 0, False, 0.01915305667034, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID("Front Plane@Arm-1@Assem3", "PLANE", 0, 0, 0, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("Front Plane", "PLANE", 0, 0, 0, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 0, False, 0.04160479875472, 0, 0, 1, 1, 0, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.004521067357359, 0.0127, 0.02226233096197, False, 0, Nothing)
+Part.ActiveView().RotateAboutCenter 0.0199075, 0
+Part.ActiveView().RotateAboutCenter 0.095556, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.0517595, 0.043691
+Part.ActiveView().RotateAboutCenter 0.063704, 0.0728184
+Part.ActiveView().RotateAboutCenter 0.07963, 0.101946
+Part.ActiveView().RotateAboutCenter 0.0278705, 0.0509729
+Part.ActiveView().RotateAboutCenter 0.0199075, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.015926, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0437965, 0.0655365
+Part.ActiveView().RotateAboutCenter 0.047778, 0.101946
+Part.ActiveView().RotateAboutCenter 0.0358335, 0.109228
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.087382
+boolstatus = Part.Extension.SelectByID("Point1@Origin@Arm-1@Assem3/Arm Seat Clamp-1@Arm", "EXTSKETCHPOINT", 0, 0, 0, True, 1, Nothing)
+Part.DeSelectByID "Point1@Origin@Arm-1@Assem3/Arm Seat Clamp-1@Arm", "EXTSKETCHPOINT", 0, 0, 0
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.004819858379278, -0.001635088317187, 0.07794797002919, True, 1, Nothing)
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.01802377126796, 0.002084615658362, 0.02794, True, 1, Nothing)
+Set Feature = Part.AddMate2 (0, 1, False, 0.04951626265209, 0, 0, 1, 1, 3.10668606855, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.01115220905126, -0.003456020170233, 0.03048000000001, False, 0, Nothing)
+Part.ActiveView().RotateAboutCenter -0.0039815, -0.0145637
+Part.ActiveView().RotateAboutCenter -0.063704, -0.0801002
+Part.ActiveView().RotateAboutCenter -0.0676855, -0.0728184
+Part.ActiveView().RotateAboutCenter -0.055741, -0.0582547
+Part.ActiveView().RotateAboutCenter -0.0756485, -0.087382
+Part.ActiveView().RotateAboutCenter -0.0836115, -0.167482
+Part.ActiveView().RotateAboutCenter -0.0597225, -0.182046
+Part.ActiveView().RotateAboutCenter -0.023889, -0.087382
+Part.ActiveView().RotateAboutCenter -0.023889, -0.087382
+Part.ActiveView().RotateAboutCenter -0.023889, -0.116509
+Part.ActiveView().RotateAboutCenter -0.007963, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.043691
+Part.ActiveView().RotateAboutCenter 0.015926, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.023889, -0.0728184
+Part.ActiveView().RotateAboutCenter 0.0437965, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.0358335, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.007963, 0
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter -0.0358335, 0.0946639
+Part.ActiveView().RotateAboutCenter -0.0437965, 0.145637
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0145637
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.0199075, 0.0218455
+Part.ActiveView().RotateAboutCenter -0.023889, 0.0364092
+Part.ActiveView().RotateAboutCenter -0.0039815, 0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+Part.ActiveView().RotateAboutCenter 0.015926, 0
+Part.ActiveView().RotateAboutCenter 0.0358335, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0039815, 0
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter 0, 0.167482
+Part.ActiveView().RotateAboutCenter 0.007963, 0.167482
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0291273
+Part.ActiveView().RotateAboutCenter 0.023889, 0.043691
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Set Feature = Part.AddMate2 (0, 1, False, 0.04951626265209, 0, 0, 1, 1, 3.10668606855, 0.5235987755983, 0.5235987755983, longstatus)
+Part.ClearSelection2 True
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.01776092370616, 0.007385936796481, 0.03047999999995, False, 0, Nothing)
+Part.ActiveView().RotateAboutCenter 0, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.007963, -0.138355
+Part.ActiveView().RotateAboutCenter 0, -0.342246
+Part.ActiveView().RotateAboutCenter 0, -0.167482
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0582547
+Part.ActiveView().RotateAboutCenter 0, -0.101946
+Part.ActiveView().RotateAboutCenter 0.007963, -0.101946
+Part.ActiveView().RotateAboutCenter 0.015926, -0.123791
+Part.ActiveView().RotateAboutCenter 0.031852, -0.116509
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.131073
+Part.ActiveView().RotateAboutCenter 0.023889, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.0728184
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.101946
+Part.ActiveView().RotateAboutCenter 0.0199075, -0.138355
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.145637
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.007963, -0.101946
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.0039815, 0.00728184
+Part.ActiveView().RotateAboutCenter 0.0119445, 0.0364092
+Part.ActiveView().RotateAboutCenter 0.007963, 0.0655365
+Part.ActiveView().RotateAboutCenter 0, 0.0655365
+Part.ActiveView().RotateAboutCenter -0.007963, 0.0946639
+Part.ActiveView().RotateAboutCenter 0, 0.0509729
+Part.ActiveView().RotateAboutCenter 0, 0.00728184
+Part.ActiveView().RotateAboutCenter 0, -0.0291273
+Part.ActiveView().RotateAboutCenter -0.015926, -0.0946639
+Part.ActiveView().RotateAboutCenter 0, -0.0218455
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.015926, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0119445, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0039815, -0.152919
+Part.ActiveView().RotateAboutCenter 0, -0.254864
+Part.ActiveView().RotateAboutCenter 0.007963, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0509729
+Part.ActiveView().RotateAboutCenter 0.023889, -0.0728184
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0364092
+Part.ActiveView().RotateAboutCenter 0.031852, -0.0655365
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.043691
+Part.ActiveView().RotateAboutCenter 0.015926, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.023889, -0.0801002
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID("", "FACE", 0.04778759666038, -0.0127, 0.02508340100905, False, 0, Nothing)
+Part.ActiveView().RotateAboutCenter 0.007963, -0.00728184
+Part.ActiveView().RotateAboutCenter 0.0995375, -0.0582547
+Part.ActiveView().RotateAboutCenter 0.195093, -0.167482
+Part.ActiveView().RotateAboutCenter 0.211019, -0.283992
+Part.ActiveView().RotateAboutCenter 0.0676855, -0.0801002
+Part.ActiveView().RotateAboutCenter 0.0517595, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0517595, -0.043691
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.0291273
+Part.ActiveView().RotateAboutCenter 0.0517595, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.0278705, -0.0145637
+Part.ActiveView().RotateAboutCenter 0.007963, -0.00728184
+Part.SaveAs2 "C:\Documents and Settings\eng2\My Documents\Conor O'Brien\New Fiber Holder\Quick-Release Version (Right Size)\V4\Transfer Fixture V3\Transfer Fixture.SLDASM", 0, FALSE, FALSE
+swApp.ActiveDoc.ActiveView.FrameState = 1
+swApp.ActiveDoc.ActiveView.FrameLeft = 198
+swApp.ActiveDoc.ActiveView.FrameTop = 261
+swApp.ActiveDoc.ActiveView.FrameState = 1
+Set Part = swApp.ActivateDoc ("Bridge.SLDPRT")
+swApp.ExitApp
+End Sub
